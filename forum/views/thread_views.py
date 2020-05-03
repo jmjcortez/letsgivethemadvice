@@ -12,6 +12,8 @@ from forum.models.thread import Thread
 class ThreadViewset(ViewSet):
 
   # No auth needed, only voting needs auth
+  authentication_classes = ()
+  permission_classes = ()
 
   def list(self, request):
     threads = list(Thread.objects.all())

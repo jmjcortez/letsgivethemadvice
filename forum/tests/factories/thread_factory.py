@@ -1,7 +1,6 @@
 import factory
 
 from forum.models.thread import Thread
-from forum.models.poll import Poll
 from forum.tests.factories.poll_factory import PollFactory
 
 class ThreadFactory(factory.django.DjangoModelFactory):
