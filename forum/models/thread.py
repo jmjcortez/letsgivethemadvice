@@ -1,5 +1,7 @@
 from django.db import models
 
+from forum.managers.thread_manager import ThreadManager
+
 
 class Thread(models.Model):
     title = models.CharField(max_length=300)
@@ -9,3 +11,5 @@ class Thread(models.Model):
     aftermath = models.TextField(blank=True, null=False)
     valid_from = models.DateTimeField(blank=True, null=True)
     valid_until = models.DateTimeField(blank=True, null=True)
+
+    objects = ThreadManager()
